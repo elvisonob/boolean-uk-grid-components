@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
+    <title>Grid Component</title>
 
     <style>
       /* Don't touch this START */
@@ -31,29 +31,103 @@
 
       /* Write CSS Here */
 
+      .two-column-grid__expand-two{
+        display:grid;
+        grid-template-columns: 200px 1fr;
+        grid-gap:5px;
+      }
+
+      .logo{
+        display:grid;
+        border: 2px dotted lightgreen;
+      }
+
+
       .three-column-grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap:5px;
       }
 
       .three-column-grid__expand-two {
+        display:grid;
+        grid-template-columns: 50px 1fr 50px;
+        gap:5px;
+
       }
 
       .five-column-grid {
+        display:grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap:5px;
       }
 
       .center-grid {
+       display:grid;
+       place-items: center;
       }
-
+      
       .centered {
+        width:300px;
+  
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
+     
+      .two-column-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:5px;
+}
 
-      .two-column-grid {
-      }
+.inner-box3{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px dotted lightgreen;
+  width:15.3vw;
+  gap:5px;
+}
+
+.box{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:5px;
+}
+
+.container1 {
+  display:grid;
+  grid-template-columns: 55px 1fr 200px;
+  grid-gap:5px;
+}
+
+.inner-box-width-sm{
+  display:grid;
+  grid-template-columns:79.5vw;
+  border: 2px dotted lightgreen;
+}
+
+.inner-box5 {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  width:3.6vw;
+  border: 2px dotted lightgreen;
+  gap:5px;
+
+}
+
+
+
     </style>
   </head>
   <body>
+    <div>
+      <h2>Two Column Grid (Icon Pattern)</h2>
+      <div class="container two-column-grid__expand-two">
+        <div class="logo"></div>
+        <div class="box expand"></div>
+      </div>
+    </div>
     <div>
       <h2>Three Column Grid</h2>
       <div class="container three-column-grid">
@@ -68,6 +142,7 @@
         <div class="box"></div>
         <div class="box expand"></div>
         <div class="box"></div>
+
       </div>
     </div>
     <div>
@@ -90,9 +165,9 @@
       <h2>Grid within Grid #1</h2>
       <div class="container two-column-grid">
         <div class="box">
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
+          <div class="inner-box3"></div>
+          <div class="inner-box3"></div>
+          <div class="inner-box3"></div>
         </div>
         <div class="box">
           <div class="inner-box"></div>
@@ -105,17 +180,17 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
+      <div class="container1">
         <div class="box">
           <div class="inner-box"></div>
         </div>
         <div class="box expand">
-          <div class="inner-box width-sm"></div>
+          <div class="inner-box-width-sm"></div>
         </div>
         <div class="box">
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
-          <div class="inner-box"></div>
+          <div class="inner-box5"></div>
+          <div class="inner-box5"></div>
+          <div class="inner-box5"></div>
         </div>
       </div>
     </div>
